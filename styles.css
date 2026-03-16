@@ -1,0 +1,176 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+:root {
+    --vermelho: #bc3b31;
+    --amarelo: #f1c45e;
+    --amarelo-claro: #f8e1a6;
+    --preto: #2b2b2bc2;
+    --fundo: #fdf6e9;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--preto);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero {
+    position: relative;
+    top: 9px;
+    z-index: 10;
+    max-width: 250px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+h1 {
+    border: 2px solid var(--vermelho);
+    background-color: var(--amarelo-claro);
+    border-radius: 12rem 12rem 0 0;
+    color: var(--vermelho);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 2px 0;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-top: 8px solid var(--vermelho);
+}
+
+form {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#inputOrder{
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#inputTable {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#inputTable:focus{
+    outline: none;
+    border-color: var(--amarelo);
+}
+
+#inputOrder:focus{
+    outline: none;
+    border-color: var(--amarelo);
+}
+
+button {
+    user-select: none;
+    background-color: var(--vermelho);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background-color: #9e2f27;
+    transform: translateY(-2px);
+}
+
+/* Order List */
+.list {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    gap: 15px;
+}
+
+.itemList {
+    background-color: var(--amarelo-claro);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid var(--amarelo);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.itemText {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #444;
+}
+
+.btnDelete {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+.alertIcon{
+    user-select: none;
+    z-index: 10;
+    display: block;
+    width: auto;
+    background-color: var(--vermelho);
+    font-size: 25px;
+    color: var(--preto);
+    font-weight: 500;
+    text-align: center;
+    padding: 0.6rem;
+    margin: 0.2rem;
+    border-radius: 2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

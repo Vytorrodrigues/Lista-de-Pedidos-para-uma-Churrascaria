@@ -24,6 +24,20 @@ O arquivo principal (`index.html`) foi construído seguindo os padrões de semâ
 - **Formulário de Entrada:** Utiliza inputs específicos para captura de dados, garantindo que a interação seja simples.
 - **Container de Lista:** Uma estrutura de Lista Não Ordenada (`<ul>`) que serve de âncora para a inserção dinâmica dos pedidos via JavaScript.
 
+## 🎨 Identidade Visual e Estilização (CSS)
+A interface foi revitalizada hoje com foco em uma estética temática de churrascaria, utilizando uma paleta de cores quentes e elementos visuais modernos.
+Destaques da Implementação:
+- Design System com Variáveis: Implementação de :root para gerenciamento de cores (--vermelho, --amarelo, --fundo), facilitando a manutenção e garantindo consistência visual.
+- Layout Responsivo: Uso combinado de Flexbox e CSS Grid para garantir que o formulário e a lista de pedidos se adaptem perfeitamente a diferentes tamanhos de tela.
+- Micro-interações:
+- Hovers e Transições: Botões com efeitos de elevação (translateY) e mudança suave de cor.
+- Feedback de Foco: Inputs que mudam de cor ao serem selecionados, melhorando a experiência de digitação.
+- Animações: Implementação de @keyframes fadeIn para que novos itens apareçam na lista com um efeito suave de deslize e opacidade.
+- Estética Temática: * O h1 recebeu um design arredondado e bordas que remetem a placas de menu clássicas.
+- Uso de drop-shadow na imagem hero para criar profundidade.
+- Criação de um card centralizado (.container) com sombra suave e borda superior de destaque.
+
+
 ## 🚀 Como Executar
 
 1. Certifique-se de ter os arquivos `index.html`, `styles.css` e `script.js` na mesma pasta.

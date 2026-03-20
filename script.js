@@ -11,6 +11,7 @@ btn.addEventListener("click", (event) => {
 
     addOrder();
     readOrder();
+    hasBlankSpace();
 
     event.preventDefault();
 })
@@ -28,35 +29,49 @@ function readOrder() {
         // let orderText = document.createTextNode(item.order);
         // let tableText = document.createTextNode(item.table);
 
-        orderElement.innerHTML = `<srtong>Mesa: ${item.table} - Pedido: ${item.order}</strong>`;
+        orderElement.innerHTML = `<srtong>Mesa:</h1> ${item.table} Pedido: ${item.order}</strong>`;
+        orderElement.classList.add("itemList");
 
-
-        let deleteOrder = document.createElement("a");
-        deleteOrder.setAttribute("href", "#");
-        deleteOrder.classList.add("btnDelete");
+        let deleteOrderBtn = document.createElement("a");
+        deleteOrderBtn.setAttribute("href", "#");
+        deleteOrderBtn.classList.add("btnDelete");
 
         let deleteText = document.createTextNode("X");
-        deleteOrder.appendChild(deleteText);
+        deleteOrderBtn.appendChild(deleteText);
 
         // deleteOrder.setAttribute("onclick", `deleteOrder(${index})`);
         //Arrow function é mais segura do que injetar como atributo? Teste
-        deleteOrder.onclick = () => deleteOrder(index);
+        deleteOrderBtn.onclick = () => deleteOrder(index);
 
         // tableElement.appendChild(tableText);
         // orderElement.appendChild(orderText);
         // orderElement.appendChild(tableElement);
 
-        orderElement.appendChild(deleteOrder);
+        orderElement.appendChild(deleteOrderBtn);
         list.appendChild(orderElement);
 
     });
 };
 
 //TODO IMPLEMENTAR REGEX NA VERIFICAÇÃO
+function hasBlankSpace(){
+
+    const orderValue = inputOrder.value;
+    const tableValue = inputTable.value;
+    const regex = /\s/; //regex global
+    if (regex.test(tableValue) || regex.test(orderValue)) {
+        console.log("OK");
+        return true;
+    };
+
+    return false;
+    
+};
+
 //ADD order on list and error background in the input
 function addOrder(){
     //Alert
-    if (inputOrder.value.trim() === "" && inputTable.value.trim() === "") {
+    if (inputOrder.value.trim() === "" || inputTable.value.trim() === "") {
         let main = document.querySelector("main");
         let alertIcon = document.createElement("span");
         let alertTable = document.createElement("span");

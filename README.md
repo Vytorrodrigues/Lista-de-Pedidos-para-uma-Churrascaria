@@ -37,6 +37,30 @@ Destaques da Implementação:
 - Uso de drop-shadow na imagem hero para criar profundidade.
 - Criação de um card centralizado (.container) com sombra suave e borda superior de destaque.
 
+- O foco principal é consolidar conhecimentos em manipulação de DOM, lógica de arrays de objetos e eventos em JavaScript puro.
+
+# Status do Projeto: 🛠️ Em Manutenção / Desenvolvimento.
+
+# 🚀 Funcionalidades Atuais
+- Captação de Dados: Recebe o pedido e o número da mesa através de inputs.
+
+- Feedback Visual: Sistema de alerta temporizado caso o usuário tente enviar campos vazios.
+
+- Renderização Dinâmica: A lista de pedidos é atualizada na tela sempre que um novo item é adicionado ou removido.
+
+- Exclusão de Itens: Possibilidade de remover pedidos da lista através de um índice específico.
+
+# ---🛠️ Próximos Passos (Roadmap)---
+- Atualmente, estou trabalhando nas seguintes melhorias:
+
+# [ ] Correção da Estrutura de Objetos: Ajustar a função addOrder para que ela envie um objeto completo { order, table } para a array, permitindo a leitura correta das propriedades.
+
+# [ ] Refatoração do DOM: Corrigir a inserção dos elementos li dentro da ul principal.
+
+# [ ] Implementação de Regex: Adicionar validações mais robustas nos campos de entrada.
+
+# [ ] Persistência de Dados: Implementar localStorage para que os pedidos não sumam ao atualizar a página.
+
 
 ## 🚀 Como Executar
 

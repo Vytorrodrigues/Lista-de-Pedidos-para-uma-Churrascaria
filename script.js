@@ -1,12 +1,9 @@
-//TODO conseguir resolver o problema de passar o número da mesa para o elemento li dentro da ul
-//Resolvido
 const btn = document.getElementById("btn");
 const inputOrder = document.getElementById("inputOrder");
 const inputTable = document.getElementById("inputTable");
 const list = document.querySelector(".list");
-// let allOrdersLister = [{}]; O erro estava no array com objeto vazio
 let allOrdersLister = [];
-//TODO IMPLEMENTARA ARRAY DE OBJETOS
+
 btn.addEventListener("click", (event) => {
 
     addOrder();
@@ -22,30 +19,28 @@ function readOrder() {
     list.innerHTML = "";
     allOrdersLister.forEach((item, index) => {
         
-        // let tableElement = document.createElement("h2");
         let orderElement = document.createElement("li");
 
-        //Decidi criar um elemento de texto mais semãntico
-        // let orderText = document.createTextNode(item.order);
-        // let tableText = document.createTextNode(item.table);
-
-        orderElement.innerHTML = `<srtong>Mesa:</h1> ${item.table} Pedido: ${item.order}</strong>`;
+        orderElement.innerHTML = `
+        <div>
+            <strong>Mesa:</strong> 
+            <p> ${item.table}</p> 
+            <strong> Pedido:</strong> 
+            <p>${item.order}</p>
+        </div    
+        `;
+        
         orderElement.classList.add("itemList");
 
         let deleteOrderBtn = document.createElement("a");
         deleteOrderBtn.setAttribute("href", "#");
         deleteOrderBtn.classList.add("btnDelete");
+        deleteOrderBtn.classList.add("btnEnd");
 
         let deleteText = document.createTextNode("X");
         deleteOrderBtn.appendChild(deleteText);
 
-        // deleteOrder.setAttribute("onclick", `deleteOrder(${index})`);
-        //Arrow function é mais segura do que injetar como atributo? Teste
         deleteOrderBtn.onclick = () => deleteOrder(index);
-
-        // tableElement.appendChild(tableText);
-        // orderElement.appendChild(orderText);
-        // orderElement.appendChild(tableElement);
 
         orderElement.appendChild(deleteOrderBtn);
         list.appendChild(orderElement);

@@ -7,16 +7,16 @@
 
 - O Brasa & Alegria é uma aplicação front-end desenvolvida para facilitar o registro e controle de comandas em tempo real para churrascarias e restaurantes. O projeto foca em uma experiência de usuário (UX) rápida, permitindo que garçons adicionem e removam pedidos de forma intuitiva.
 
-#🚀 Funcionalidades Principais
+# 🚀 Funcionalidades Principais
 Registro Instantâneo: Adição de pedidos com número da mesa e descrição.
 
-Persistência de Dados: Uso de localStorage para manter os dados salvos mesmo após fechar o navegador.
+- Persistência de Dados: Uso de localStorage para manter os dados salvos mesmo após fechar o navegador.
 
-Validação em Tempo Real: Sistema de alertas personalizados para campos vazios.
+- Validação em Tempo Real: Sistema de alertas personalizados para campos vazios.
 
-Interface Responsiva: Design adaptável para tablets e smartphones.
+- Interface Responsiva: Design adaptável para tablets e smartphones.
 
-#🛠️ Desafios Técnicos e Aprendizados (Refatoração)
+# 🛠️ Desafios Técnicos e Aprendizados (Refatoração)
 Durante o desenvolvimento, identifiquei e corrigi erros estruturais importantes que serviram como grande aprendizado em lógica de programação:
 
 1. Estrutura de Objetos e Arrays
@@ -25,16 +25,16 @@ Inicialmente, houve dificuldade em como armazenar os dados. Corrigi a lógica pa
 Correção: Implementei o push({order: newOrder, table: newTable}) para garantir a integridade dos dados.
 
 2. Ciclo de Vida do Dado (CRUD)
-addOrder: Refatorei para incluir validações de strings vazias usando .trim(), evitando registros "fantasmas" na lista.
+- addOrder: Refatorei para incluir validações de strings vazias usando .trim(), evitando registros "fantasmas" na lista.
 
-readOrder: O maior desafio foi a renderização. Ajustei para que a lista seja limpa (innerHTML = "") antes de cada nova leitura, impedindo a duplicidade de itens na tela.
+- readOrder: O maior desafio foi a renderização. Ajustei para que a lista seja limpa (innerHTML = "") antes de cada nova leitura, impedindo a duplicidade de itens na tela.
 
-deleteOrder: Implementei a exclusão por index, garantindo que o usuário remova exatamente o pedido selecionado através do método splice.
+- deleteOrder: Implementei a exclusão por index, garantindo que o usuário remova exatamente o pedido selecionado através do método splice.
 
 3. Manipulação Semântica do DOM
 - No JavaScript, optei por criar os elementos de forma dinâmica, mas mantendo a semântica:
 
--Uso de <li> para cada item da lista.
+- Uso de <li> para cada item da lista.
 
 - Criação de botões de exclusão com elementos <a> estilizados, injetando o comportamento de clique via onclick diretamente na criação do elemento.
 

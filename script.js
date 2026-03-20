@@ -2,14 +2,10 @@ const btn = document.getElementById("btn");
 const inputOrder = document.getElementById("inputOrder");
 const inputTable = document.getElementById("inputTable");
 const list = document.querySelector(".list");
-let allOrdersLister = [];
+let allOrdersLister = JSON.parse(localStorage.getItem("@order")) || [];
 
 btn.addEventListener("click", (event) => {
-
     addOrder();
-    readOrder();
-    hasBlankSpace();
-
     event.preventDefault();
 })
 
@@ -48,6 +44,8 @@ function readOrder() {
     });
 };
 
+readOrder();
+
 //ADD order on list and error background in the input
 function addOrder(){
     //Alert
@@ -85,6 +83,7 @@ function addOrder(){
         inputOrder.value = "";
         inputTable.value = "";
 
+        saveDate();
         readOrder();
     }
 };
@@ -92,4 +91,9 @@ function addOrder(){
 function deleteOrder(position) {
     allOrdersLister.splice(position, 1);
     readOrder();
+    saveDate();
+};
+
+function saveDate(){
+    localStorage.setItem("@order", JSON.stringify(allOrdersLister));
 };

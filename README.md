@@ -57,7 +57,7 @@ Destaques da Implementação:
 
 - [x] Refatoração do DOM: Corrigir a inserção dos elementos li dentro da ul principal.
 
-- [ ] Persistência de Dados: Implementar localStorage para que os pedidos não sumam ao atualizar a página.
+- [x] Persistência de Dados: Implementar localStorage para que os pedidos não sumam ao atualizar a página.
 
 
 ## 🚀 Como Executar

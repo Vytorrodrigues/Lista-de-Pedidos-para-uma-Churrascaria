@@ -71,4 +71,4 @@ Correção: Implementei o push({order: newOrder, table: newTable}) para garantir
 Desenvolvido por Vytor Rodrigues 🚀
 Junior Developer | Estudante de ADS
 
-- git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+- git clone [https://github.com/Vytorrodrigues/Lista-de-Pedidos-Churrascaria.git]

@@ -38,6 +38,16 @@ Correção: Implementei o push({order: newOrder, table: newTable}) para garantir
 
 - Criação de botões de exclusão com elementos <a> estilizados, injetando o comportamento de clique via onclick diretamente na criação do elemento.
 
+4. Tratamento de Dados com Regex
+- A aplicação utiliza Expressões Regulares (Regex) para validar a entrada de dados no campo de identificação da mesa (inputTable). Isso garante que o sistema não processe caracteres inválidos e mantenha a consistência do banco de dados local.
+
+-  Funcionamento da Validação
+- O filtro é aplicado em tempo real através do evento input. Sempre que o usuário digita um caractere, a função regexExcludeNumber entra em ação:
+
+- Padrão Utilizado: /\D/g
+
+- Ação: Substituição imediata por string vazia ("").
+
 # 🎨 Design e UI
 - A estilização foi pensada para transmitir a energia de uma churrascaria:
 

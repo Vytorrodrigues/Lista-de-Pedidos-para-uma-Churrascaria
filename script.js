@@ -12,7 +12,6 @@ btn.addEventListener("click", (event) => {
     event.preventDefault();
 })
 
-//Read order in ul
 function readOrder() {
 
     list.innerHTML = "";
@@ -49,9 +48,7 @@ function readOrder() {
 
 readOrder();
 
-//ADD order on list and error background in the input
 function addOrder(){
-    //Alert
     if (inputOrder.value.trim() === "" || inputTable.value.trim() === "") {
         let main = document.querySelector("main");
         let alertIcon = document.createElement("span");

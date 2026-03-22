@@ -95,7 +95,6 @@ function regexExcludeNumber(){
     inputTable.addEventListener("input", () => {
         let regexString = /\D/g;
         let valueString = inputTable.value.replace(regexString, "");
-
         inputTable.value = valueString;        
     });
 };

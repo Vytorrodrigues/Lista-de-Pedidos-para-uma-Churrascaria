@@ -57,7 +57,7 @@ function addOrder(){
 
         let textAlert = document.createTextNode("⚠️Você não digitou o pedido!");
         alertIcon.appendChild(textAlert);
-        container.lastElementChild.prepend(alertIcon);
+        container.prepend(alertIcon);
 
         if(container.childElementCount > 3 ){
             alertIcon.remove();

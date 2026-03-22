@@ -50,16 +50,16 @@ readOrder();
 
 function addOrder(){
     if (inputOrder.value.trim() === "" || inputTable.value.trim() === "") {
-        let main = document.querySelector("main");
+        let container = document.querySelector(".container");
         let alertIcon = document.createElement("span");
 
         alertIcon.classList.add("alertIcon");
 
         let textAlert = document.createTextNode("⚠️Você não digitou o pedido!");
         alertIcon.appendChild(textAlert);
-        main.appendChild(alertIcon);
+        container.lastElementChild.prepend(alertIcon);
 
-        if(main.childElementCount > 3 ){
+        if(container.childElementCount > 3 ){
             alertIcon.remove();
         }
 

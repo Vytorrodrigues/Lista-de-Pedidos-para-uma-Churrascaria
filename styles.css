@@ -13,7 +13,7 @@ box-sizing: border-box;
     --fundo: #fdf6e9;
 }
 
-body {
+main {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--fundo);
     color: var(--preto);
@@ -22,6 +22,30 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+}
+
+footer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    & p{
+        text-align: center;
+        flex-grow: 1;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        margin-right: 10px;        
+        font-weight: 500;
+        font-size: 1rem;
+        margin: 0.3rem;
+    }
+
+    & a{
+        text-decoration: none;
+        margin: 0.2rem;
+        font-size: 27px;
+    }
 }
 
 .logo{
